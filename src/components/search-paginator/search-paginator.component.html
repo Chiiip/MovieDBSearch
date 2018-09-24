@@ -1,0 +1,41 @@
+<div class="container">
+    <section id="results">
+        <div class="movie-info" (click)="viewDetail(item.id)" *ngFor="let item of searchResult | slice: ((currentPage - 1) % 4) * 5 : (((currentPage - 1) % 4) * 5 + 5)">
+            <img [src]="getURL(item.poster_path)">
+            <div class="card-description">
+                <section class="card-header">
+                    <div class="card-average">
+                        <span class="average-number">
+                            {{item.vote_average * 10 + '%'}}
+                        </span>
+                    </div>
+                    <div class="title-wrapper">
+                        <div class="card-title">
+                            <h1>{{item.title}}</h1>
+                        </div>
+                        <div class="card-date">
+                            {{item.release_date | date: 'dd/MM/yyyy'}}
+                        </div>
+                    </div>
+                </section>
+                <section class="card-body">
+                    <div class="card-overview">
+                        {{item.overview}}
+                    </div>
+                    <ul class="genres">
+                        <li class="genre-name" *ngFor="let genre of item.genre_descriptions">
+                            {{genre}}
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </section>
+    <footer id="paginator">
+        <button [ngClass]="currentPage === page ? 'selected-button' : ''" (click)="selectPage(page)" class="page-button" *ngFor="let page of currentPages">
+            <div class="number">
+                {{page}}
+            </div>
+        </button>
+    </footer>
+</div>

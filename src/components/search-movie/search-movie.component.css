@@ -1,0 +1,49 @@
+.search-input {
+    width: 80%;
+    height: 1.5em;
+    border-radius: 30px;
+    border: transparent;
+    background-color: #ebebeb;
+    padding: 0.5em 2em;
+    outline: none;
+    font-family: "Abel";
+    font-size: 13pt;
+}
+
+input.ng-invalid.ng-touched {
+    border: solid 1pt red;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+div#search {
+    margin-top: 5%;
+}
+
+:-moz-placeholder {
+    color:    #a9c6d3;
+    opacity:  1;    
+    font-weight: 550;
+ }
+ ::-moz-placeholder {
+    color:    #a9c6d3;
+    opacity:  1;
+    font-weight: 550;
+ }
+ :-ms-input-placeholder {
+    color:    #a9c6d3;
+    font-weight: 550;
+ }
+ ::-ms-input-placeholder {
+    color:    #a9c6d3;
+    font-weight: 550;
+ }
+ ::placeholder {
+    color:    #a9c6d3;
+    font-weight: 550;
+ }

@@ -1,0 +1,145 @@
+#movie-trailer iframe {
+    width: 100%;
+    height: 40em;
+    border: 0;
+}
+
+#movie-trailer {
+    padding-bottom: 20%;
+}
+
+#movie-content {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    -webkit-flex-flow: row wrap-reverse;
+    padding: 0 0 5% 0;
+    background-color: #f2f2f2;
+    justify-content: center;
+}
+
+ul.genres {
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    padding: 0;
+}
+
+li.genre-name {
+    display: flex;
+    font-family: 'Abel';
+    color: #4986ac;
+    border: 0.9pt solid #4986ac;
+    border-radius: 10pt;
+    padding: 0 5px;
+    background-color: white;
+    margin: 0 5px 0 0;
+}
+
+div.card-average {
+    border: 4.5pt solid #00e8e4;
+    box-shadow: 0 0 0pt 3pt #116193;
+    border-radius: 100%;
+    height: 90px;
+    width: 90px;
+    margin-left: 25px;
+    background-color: #116193;
+}
+
+span.average-number {
+    font-family: 'Abel';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 28pt;
+    color: #00e8e4;
+}
+
+#database-meta {
+    display: flex;
+    flex-flow: column wrap;
+    -webkit-flex-flow: column wrap;
+}
+
+#bottom-container {
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 4%;
+}
+
+#movie-header {
+    background-color: #e6e6e6;
+    margin-top: 5%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#movie-title {
+    align-self: flex-start;
+    flex-grow: 1;
+    font-family: 'Abel';
+    color: #2c729e;
+    font-size: 26pt;
+    margin: 10px 40px;
+    justify-content: center;
+    font-weight: 550;
+}
+
+#movie-date {
+    align-self: flex-end;
+    font-family: 'Lato-Regular';
+    margin: 20px 0;
+    font-size: 13pt;
+    color: #adadad;
+}
+
+#left-container {
+    padding: 2% 40px 0 40px;
+    flex-basis: 60%;
+    flex-grow: 1;
+}
+
+h1.bottom-line {
+    padding-bottom: 5px;
+    border-bottom: 1.5pt solid #92eeed;
+    margin: 0;
+    font-family: 'Abel';
+    color: #548caf;
+    font-size: 16pt;
+    font-weight: 550;
+}
+
+#movie-overview {
+    font-family: 'Lato-Regular';
+    color: #757575;
+    font-weight: 600;
+}
+
+div#overview {
+    margin: 10px 0 40px 0;
+}
+
+dl#top-container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    margin-top: 3%;
+}
+dl div dd {
+    margin: 0;
+    font-family: 'Lato-Regular';
+    color: #8d8d8d;
+}
+
+dl div dt {
+    font-size: 18pt;
+    color: #4d88ac;
+    font-family: 'Abel';
+}
+
+dl div{
+    text-align: center;
+}

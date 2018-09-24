@@ -1,0 +1,8 @@
+<div id="search">
+  <form [formGroup]="searchForm" class="search-form">
+    <input formControlName="searchText" (keyup.enter)="newSearch()" class="search-input" type="text" placeholder="Busque um filme por nome, ano ou gênero...">
+  </form>
+</div>
+<div id="search-results">
+  <app-search-paginator (moreResultsEvent)="loadMoreResults()" #searchPaginator></app-search-paginator>
+</div>

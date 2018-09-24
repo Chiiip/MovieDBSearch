@@ -1,0 +1,63 @@
+<section id="movie-header">
+  <span id="movie-title">{{movie?.title}}</span>
+  <span id="movie-date">{{movie?.release_date | date: 'dd/MM/yyyy'}}</span>
+</section>
+<article id="movie-content">
+  <div id="left-container">
+    <section id="movie-overview">
+      <h1 class="bottom-line">Sinopse</h1>
+      <div id="overview">
+        {{movie?.overview}}
+      </div>
+    </section>
+    <section id="movie-info">
+    </section>
+    <section id="database-meta">
+      <h1 class="bottom-line">Informações</h1>
+      <dl id="top-container">
+        <div>
+          <dt>Situação</dt>
+          <dd>{{movie?.status}}</dd>
+        </div>
+        <div>
+          <dt>Idioma</dt>
+          <dd>{{movie?.original_language}}</dd>
+        </div>
+        <div>
+          <dt>Duração</dt>
+          <dd>{{movie?.runtime | hoursMinutes}}</dd>
+        </div>
+        <div>
+          <dt>Orçamento</dt>
+          <dd>{{movie?.budget | currency:'USD':true:'2.2-2'}}</dd>
+        </div>
+        <div>
+          <dt>Receita</dt>
+          <dd>{{movie?.revenue | currency:'USD':true:'2.2-2'}}</dd>
+        </div>
+        <div>
+          <dt>Lucro</dt>
+          <dd>{{(movie?.revenue - movie?.budget) | currency:'USD':true:'2.2-2'}}</dd>
+        </div>
+      </dl>
+      <div id="bottom-container">
+        <ul class="genres">
+          <li class="genre-name" *ngFor="let genre of movie?.genres">
+            {{genre.name}}
+          </li>
+        </ul>
+        <div class="card-average">
+          <span class="average-number">
+            {{movie?.vote_average * 10 + '%'}}
+          </span>
+        </div>
+      </div>
+    </section>
+  </div>
+  <img [src]='getURL()'>
+</article>
+
+<section id="movie-trailer" *ngIf="movieURL !== undefined">
+  <iframe [src]="movieURL">
+  </iframe>
+</section>
