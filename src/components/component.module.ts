@@ -7,10 +7,12 @@ import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/fo
 import { SearchPaginatorComponent } from './search-paginator/search-paginator.component';
 import { CommonModule } from '../../node_modules/@angular/common';
 import { HoursMinutesPipe } from '../pipes/HoursMinutes.pipe';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     declarations: [
         HeaderComponent,
+        FooterComponent,
       SearchMovieComponent,
       MovieInfoComponent,
       SearchPaginatorComponent,
@@ -25,7 +27,8 @@ import { HoursMinutesPipe } from '../pipes/HoursMinutes.pipe';
         SearchMovieComponent,
         MovieInfoComponent,
         SearchPaginatorComponent,
-        HoursMinutesPipe
+        HoursMinutesPipe,
+        FooterComponent
     ],
     providers: []
   })
