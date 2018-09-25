@@ -10,6 +10,12 @@ Para poder iniciar esta aplicação, é necessário ter o NPM instalado na sua m
 npm install
 ```
 
+Depois, instalar o Angular CLI também via NPM através do comando
+
+```sh
+npm install -g @angular/cli
+```
+
 E em seguida 
 
 ```sh
